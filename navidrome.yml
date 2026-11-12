@@ -7,7 +7,14 @@ services:
     restart: unless-stopped
     environment:
       # Optional: put your config options customization here. Examples:
-      # ND_LOGLEVEL: debug
+      
+      ND_BASEURL: "https://music.sbnet.org"
+      ND_DEFAULTTHEME: "Dark"
+      ND_LOGLEVEL: info
+      ND_ENABLEINSIGHTSCOLLECTOR: "false"
+      ND_ENABLESHARING: "true"
+      ND_PREFERSORTTAGS: "true"
+      ND_SCANSCHEDULE: 1h
     volumes:
       - "./data:/data"
       - "/mnt/plex/Media/music/music:/music:ro"
